@@ -43,10 +43,10 @@ document.getElementById("searchInput").addEventListener("input", function () {
     const rows = table.getElementsByTagName("tr");
 
     for (let i = 1; i < rows.length; i++) {
-        const codeCell = rows[i].getElementsByTagName("td")[0];
-        if (codeCell) {
-            const codeText = codeCell.textContent.toLowerCase();
-            if (codeText.includes(searchValue)) {
+        const nameCell = rows[i].getElementsByTagName("td")[2]; // Cambia el índice a 2 para buscar en la columna de nombres
+        if (nameCell) {
+            const nameText = nameCell.textContent.toLowerCase();
+            if (nameText.includes(searchValue)) {
                 rows[i].style.display = "";
             } else {
                 rows[i].style.display = "none";
@@ -54,6 +54,7 @@ document.getElementById("searchInput").addEventListener("input", function () {
         }
     }
 });
+
 
 const table = document.getElementById("scheduleTable");
 const headerRows = table.querySelectorAll("thead tr");
