@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #080808;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Estilos para la tabla y su encabezado fijo */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+table, th, td {
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #007bff;
+    font-weight: bold;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Asegura que el encabezado quede por encima del contenido */
+}
+
+td {
+    background-color: #f5f5f5;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+td:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilos para el encabezado fijo */
+thead.scrollable {
+    background-color: #007bff;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+th.scrollable {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #fff;
+}
+
+/* Estilo para filas pares */
+tr:nth-child(even) td {
+    background-color: #f5f5f5;
+}
+
+/* Ajuste para que la barra de búsqueda tenga el mismo ancho que la tabla */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #1d11be;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el ancho incluye el relleno y el borde */
+}
