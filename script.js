@@ -35,15 +35,18 @@ fetch(filePath)
         }
     });
 
+    // Mostrar la tabla después de cargar el archivo y aplicar los estilos
+    table.style.display = "table";
+
   });
 
-document.getElementById("searchInput").addEventListener("input", function () {
+  document.getElementById("searchInput").addEventListener("input", function () {
     const searchValue = this.value.toLowerCase().trim();
     const table = document.getElementById("scheduleTable");
     const rows = table.getElementsByTagName("tr");
 
     for (let i = 1; i < rows.length; i++) {
-        const nameCell = rows[i].getElementsByTagName("td")[2]; // Cambia el índice a 2 para buscar en la columna de nombres
+        const nameCell = rows[i].getElementsByTagName("td")[1]; // Cambiado el índice a 1 para buscar en la segunda columna de nombres
         if (nameCell) {
             const nameText = nameCell.textContent.toLowerCase();
             if (nameText.includes(searchValue)) {
@@ -54,7 +57,6 @@ document.getElementById("searchInput").addEventListener("input", function () {
         }
     }
 });
-
 
 const table = document.getElementById("scheduleTable");
 const headerRows = table.querySelectorAll("thead tr");
