@@ -46,7 +46,7 @@ fetch(filePath)
     const rows = table.getElementsByTagName("tr");
 
     for (let i = 1; i < rows.length; i++) {
-        const nameCell = rows[i].getElementsByTagName("td")[0]; // Cambiado el índice a 1 para buscar en la segunda columna de nombres
+        const nameCell = rows[i].getElementsByTagName("td")[0]; // Cambiado el índice a 0 para buscar en la primera columna de nombres
         if (nameCell) {
             const nameText = nameCell.textContent.toLowerCase();
             if (nameText.includes(searchValue)) {
